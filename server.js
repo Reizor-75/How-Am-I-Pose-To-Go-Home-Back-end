@@ -11,7 +11,8 @@ import './config/database.js'
 // import routes
 import { router as profilesRouter } from './routes/profiles.js'
 import { router as authRouter } from './routes/auth.js'
-import { router as subLineRouter } from './routes/SubwayLines.js'
+import { router as subLineRouter } from './routes/subwayLines.js'
+import { router as subStationRouter } from './routes/subwayStations.js'
 
 // create the express app
 const app = express()
@@ -26,6 +27,7 @@ app.use(formData.parse())
 app.use('/api/profiles', profilesRouter)
 app.use('/api/auth', authRouter)
 app.use('/api/subwayLines', subLineRouter)
+app.use('/api/subwayLines', subStationRouter)
 
 // handle 404 errors
 app.use(function (req, res, next) {
