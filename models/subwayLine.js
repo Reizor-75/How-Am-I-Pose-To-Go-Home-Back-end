@@ -7,7 +7,7 @@ const subwayLineSchema = new Schema({
   catagory: String,
   stations: [{
     type: Schema.Types.ObjectId,
-    ref: 'subwayStation'
+    ref: 'SubwayStation'
   }],
   serviceAlerts:[{type: String}],
 },{
